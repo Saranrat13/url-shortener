@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>url-shortener</title>
+  <meta name="Multiple" content="">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="app.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="container">
+
+	<section class="form">
+    <div class="form-center">
+		<h2>Add new awesome</h2>
+	<form action="/awesome" method="POST">
+    <div>
+      <label for="image">Awesome image:</label><br>
+	    <input id="image" type="text" name="add-url" placeholder="awesome image url">
+    </div>
+    <div>
+      <label for="title">Awesome Title:</label><br>
+      <input id="title" type="text" name="image-name" placeholder="awesome title">
+    </div>
+    <div>
+      <label for="detail">Awesome Detail:</label><br>
+	    <textarea id="detail" rows="4" cols="50" name="detail" form="usrform" placeholder="awesome detail"></textarea>
+    </div>
+    <div>
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+  </div>
+	</section>
+</div> <!-- container -->
+
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+  <!-- <script src="js/script.js"></script> -->
+</body>
+
+</html>
