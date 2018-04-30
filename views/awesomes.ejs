@@ -1,0 +1,27 @@
+
+<% include partials/header %>
+
+<div class="container">
+
+<section class="wrapper">
+<div class="heading">
+  <h1>SomeSN-url-shortener's Awesome Center</h1>
+</div>
+
+<% awesomes.forEach(function(awesomes){ %>
+  <div class="awesome-center ">
+    <article class="awesome">
+      <img src="<%= awesomes.image %>" alt="">
+
+      <div class="awesome-text">
+        <h3><%= awesomes.title %></h3>
+        <p><%= awesomes.detail %></p>
+      </div>
+    </article>
+  </div>
+
+<% }) %>
+
+<a class="link" href="/awesomes/new">Add New Awesome</a>
+
+<% include partials/footer %>

@@ -1,0 +1,25 @@
+<% include partials/header %>
+
+<section class="form">
+    <div class="form-center">
+		<h2>Add new awesome</h2>
+	<form action="/awesome" method="POST">
+    <div>
+      <label for="image">Awesome image:</label><br>
+	    <input id="image" type="text" name="add-url" placeholder="awesome image url">
+    </div>
+    <div>
+      <label for="title">Awesome Title:</label><br>
+      <input id="title" type="text" name="image-name" placeholder="awesome title">
+    </div>
+    <div>
+      <label for="detail">Awesome Detail:</label><br>
+	    <textarea id="detail" rows="4" cols="50" name="detail" form="usrform" placeholder="awesome detail"></textarea>
+    </div>
+    <div>
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+  </div>
+  <div><a class="link" href="/awesomes">Back to Awesomes Collections</a></div>
+	</section>
