@@ -1,13 +1,11 @@
-const urls = [{
-  originalURL: 'https://css-tricks.com/snippets/css/complete-guide-grid/',
-  shortenedURL: 'css-grid'
-}, {
-  originalURL: 'https://pixabay.com/en/users/Free-Photos-242387/',
-  shortenedURL: 'free-photos'
-}, {
-  originalURL: 'http://colorpalettes.net/',
-  shortenedURL: 'color'
-}]
+let urls = []
+
+
+const urlsJSON = localStorage.getItem('urls')
+
+  if (urlsJSON !== null) {
+    urls = JSON.parse(urlsJSON)
+  }
 
 
 const renderurls = function (urls) {
@@ -35,6 +33,8 @@ document.querySelector('#form').addEventListener('submit', function (e) {
   urls.push({ // push the data onto the array
     shortenedURL: e.target.elements.shortenedURL.value
   })
+
+  localStorage.setItem('urls', JSON.stringify(urls))
 
   renderurls(urls)
   e.target.elements.originalURL.value = ''
